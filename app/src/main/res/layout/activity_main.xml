@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00ffff"
+    tools:context="yasin.com.mwgridview.MainActivity">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:background="#ffffff"
+        android:animateLayoutChanges="true"
+        android:id="@+id/yule1ll"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/select"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:background="#000000"
+            android:layout_width="770px"
+            android:layout_height="50px">
+
+            <Button
+                android:id="@+id/close1"
+                android:text="×"
+                android:textColor="#fa0808"
+                android:background="#000000"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="45px"
+                android:layout_height="45px" />
+
+        </RelativeLayout>
+    <FrameLayout
+      android:id="@+id/yule1"
+      android:layout_width="770px"
+      android:layout_height="450px"></FrameLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:background="#ffffff"
+        android:animateLayoutChanges="true"
+        android:id="@+id/yule2ll"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/select"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:background="#000000"
+            android:layout_width="770px"
+            android:layout_height="50px">
+            <Button
+                android:id="@+id/close2"
+                android:text="×"
+                android:textColor="#fa0808"
+                android:background="#000000"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="45px"
+                android:layout_height="45px" />
+
+        </RelativeLayout>
+        <FrameLayout
+            android:id="@+id/yule2"
+            android:layout_width="770px"
+            android:layout_height="450px">
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_alignParentRight="true"
+        android:id="@+id/select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn1"
+            android:text="应用1"
+            android:layout_width="270px"
+            android:layout_height="270px" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:text="应用2"
+            android:layout_width="270px"
+            android:layout_height="270px" />
+
+        <Button
+            android:id="@+id/btn3"
+            android:text="应用3"
+            android:layout_width="270px"
+            android:layout_height="270px" />
+
+        <Button
+            android:id="@+id/btn4"
+            android:text="应用4"
+            android:layout_width="270px"
+            android:layout_height="270px" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
