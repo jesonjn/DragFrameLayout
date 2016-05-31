@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
     Fragment3 fragment3;
     Fragment4 fragment4;//以上为不同功能的fragment
     Fragment1_1 fragment1_1;
-    LinearLayout yule1ll,yule2ll;//两个fragment父类布局，包含顶部黑框和framelayout
+    MyLinearLayout yule1ll,yule2ll;//两个fragment父类布局，包含顶部黑框和framelayout
     int lastX,lastY,cX,cY,screenWidth,screenHeight;//lastx,y是用来保存拖放停止后的状态,screenWidth,Height代表屏幕宽高
     AppRunning appRunning;//存放两个linearlayout的位置信息和是否可用
     MyReceiver myReceiver;//接受位置信息
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         myReceiver = new MyReceiver();
         registerReceiver(myReceiver,filter);
 
-
+       // startActivity(new Intent(MainActivity.this,Main2Activity.class));
 
         appRunning = new AppRunning();
         DisplayMetrics dm = getResources().getDisplayMetrics();
@@ -70,14 +70,14 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                 if(id==0){
                     Toast.makeText(MainActivity.this,"最多开启两个应用",Toast.LENGTH_LONG).show();
                 }else{
-                    //fragment1 = new Fragment1();
-                    fragment1_1 = new Fragment1_1();
+                    fragment1 = new Fragment1();
+                    //fragment1_1 = new Fragment1_1();
                     appRunning.initData();
                     setLayout((id==R.id.yule1?1:2));
                     Bundle bundle = new Bundle();
                     bundle.putInt("mode",(id==R.id.yule1?1:2));
-                    fragment1_1.setArguments(bundle);
-                    getSupportFragmentManager().beginTransaction().replace(id,fragment1_1).commit();
+                    fragment1.setArguments(bundle);
+                    getSupportFragmentManager().beginTransaction().replace(id,fragment1).commit();
                     btn1.setVisibility(View.GONE);
                     findViewById((id==R.id.yule1?R.id.yule1ll:R.id.yule2ll)).setVisibility(View.VISIBLE);
                 }
@@ -135,9 +135,16 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                 }
             }
         });
-        yule1ll = (LinearLayout) findViewById(R.id.yule1ll);
-        yule1ll.setOnTouchListener(this);
-        yule2ll = (LinearLayout) findViewById(R.id.yule2ll);
+        yule1ll = (MyLinearLayout) findViewById(R.id.yule1ll);
+        yule1ll.setOnTouchListener(MainActivity.this);
+        yule1ll.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Log.e("yasin","longpr");
+                return true;
+            }
+        });
+        yule2ll = (MyLinearLayout) findViewById(R.id.yule2ll);
         yule2ll.setOnTouchListener(this);
         yule1 = (FrameLayout) findViewById(R.id.yule1);
         yule2 = (FrameLayout) findViewById(R.id.yule2);
