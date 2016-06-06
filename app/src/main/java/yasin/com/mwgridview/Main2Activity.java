@@ -8,14 +8,14 @@ import android.view.View;
 
 public class Main2Activity extends AppCompatActivity {
 
-    MyLinearLayout myLinearLayout ;
+    MyRelativeLayout myLinearLayout ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        myLinearLayout = (MyLinearLayout) findViewById(R.id.mylinearlayout);
+        myLinearLayout = (MyRelativeLayout) findViewById(R.id.mylinearlayout);
         myLinearLayout.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
