@@ -7,7 +7,7 @@
     android:background="#00ffff"
     tools:context="yasin.com.mwgridview.MainActivity">
 
-    <yasin.com.mwgridview.MyLinearLayout
+    <yasin.com.mwgridview.MyRelativeLayout
         android:visibility="gone"
         android:background="#ffffff"
         android:animateLayoutChanges="true"
@@ -37,10 +37,10 @@
       android:id="@+id/yule1"
       android:layout_width="770px"
       android:layout_height="450px"></FrameLayout>
-    </yasin.com.mwgridview.MyLinearLayout>
+    </yasin.com.mwgridview.MyRelativeLayout>
 
 
-    <yasin.com.mwgridview.MyLinearLayout
+    <yasin.com.mwgridview.MyRelativeLayout
         android:visibility="gone"
         android:background="#ffffff"
         android:animateLayoutChanges="true"
@@ -71,7 +71,7 @@
             android:layout_height="450px">
 
         </FrameLayout>
-    </yasin.com.mwgridview.MyLinearLayout>
+    </yasin.com.mwgridview.MyRelativeLayout>
 
     <ScrollView
         android:layout_alignParentRight="true"

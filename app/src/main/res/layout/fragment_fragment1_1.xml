@@ -1,12 +1,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-   <WebView
-       android:id="@+id/news_webview"
-       android:layout_width="match_parent"
-       android:layout_height="match_parent">
 
-   </WebView>
+
+
+   <ListView
+       android:layout_alignParentRight="true"
+       android:id="@+id/listview"
+       android:layout_width="100px"
+       android:layout_height="wrap_content"></ListView>
     
 
 </RelativeLayout>
